@@ -53,5 +53,7 @@ class Friends_analyzer:
 
 
 FA = Friends_analyzer()
-FA.create_graph()
+resp = input("Do you want to build a graph again? YES/NO: ")
+if resp == "YES":
+    FA.create_graph()
 FA.draw_graph()
