@@ -4,6 +4,7 @@ import graphBuilder
 import networkx as nx
 from pyvis.network import Network
 
+
 class Friends_analyzer:
     def __init__(self, user_id="growalltime"):
         self.access_token = "YOUR ACCESS TOKEN WITH PERMISSION TO FRIENDS"
@@ -46,12 +47,8 @@ class Friends_analyzer:
                 friend = self.df[self.df["VKid"] == friendID].loc[:, "Name"].values
                 if friend.size != 0:
                     G.add_edge(row["Name"], friend[0])
-        print(G)
         net.from_nx(G)
-        net.toggle_physics(False)
         net.show("nx.html", notebook=False)
-
-
 
 
 FA = Friends_analyzer()
