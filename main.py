@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-import vk
 import json
 import graphBuilder
 import networkx as nx
