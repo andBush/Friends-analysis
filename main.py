@@ -55,5 +55,5 @@ class Friends_analyzer:
 
 
 FA = Friends_analyzer()
-#FA.create_graph()
+FA.create_graph()
 FA.draw_graph()
